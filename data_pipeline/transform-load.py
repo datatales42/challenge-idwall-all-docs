@@ -1,10 +1,7 @@
-import requests
-import json
 import ast
 import pandas as pd
 import pycountry
 from datetime import datetime, date
-from sqlalchemy import create_engine
 from datetime import datetime
 import np
 import cx_Oracle   # pip install cx_Oracle
