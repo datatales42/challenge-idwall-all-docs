@@ -17,6 +17,7 @@ HOST = "oracle.fiap.com.br"
 PORT = "1521"
 SID = "ORCL"
 TARGET_TABLE = 'FBI_INTERPOL_WANTED_CRIMINALS'
+HISTORY_TABLE = 'FBI_INTERPOL_WANTED_CRIMINALS_HISTORY'
 
 # Install Oracle Client https://www.oracle.com/database/technologies/instant-client/downloads.html
 # Copy the address where the instant client was unzipped
@@ -203,7 +204,8 @@ merged_df.replace("nan", np.nan, inplace=True)
 
 print('Success! Finished transforming and uniting data into a single dataframe.')
 
-# -------------------------------------- SAVE TO ORACLE DATABASE --------------------------------------
+
+# -------------------------------------- CONNECT TO ORACLE DATABASE --------------------------------------
 try:
     cx_Oracle.init_oracle_client(lib_dir=lib_dir)
 except:  # may have been initialized already
@@ -213,25 +215,60 @@ dsn = cx_Oracle.makedsn(HOST, PORT, sid=SID)
 connection = cx_Oracle.connect(user=USERNAME, password=PASSWORD, dsn=dsn)
 cursor = connection.cursor()
 
+
+# -------------------------------------- WRITE TO PRODUCTION TABLE --------------------------------------
 try:  # Check if table exists
     pd.read_sql(f'SELECT * FROM {TARGET_TABLE}', connection)
 except:
     try:
-        cursor.execute(SQL_CREATE_STATEMENT_FROM_DATAFRAME(merged_df, TARGET_TABLE))
-        print('Table created')
+        cursor.execute(SQL_CREATE_STATEMENT_FROM_DATAFRAME(interpol_wanted_df, TARGET_TABLE))
+        print(f'Table {TARGET_TABLE} created')
     except Exception as e:
-        print('Table not created')
+        print(f'Table {TARGET_TABLE} not created')
         print(e)
-
-# Write the DataFrame to Oracle database 
-insert_statements = SQL_INSERT_STATEMENT_FROM_DATAFRAME(merged_df, TARGET_TABLE)
-for statement in insert_statements:
+finally:
     try:
-        cursor.execute(statement)
+        # Delete all records previously written
+        cursor.execute(f'DELETE FROM {TARGET_TABLE}')
+
+        # Write the DataFrame to Oracle database 
+        insert_statements = SQL_INSERT_STATEMENT_FROM_DATAFRAME(interpol_wanted_df, TARGET_TABLE)
+        for statement in insert_statements:
+            try:
+                cursor.execute(statement)
+                connection.commit()  # Commit the changes
+            except Exception as e:
+                print(e)
+        print(f'Done writing to {TARGET_TABLE}')
+
     except Exception as e:
         print(e)
 
-connection.commit()  # Commit the changes
-cursor.close()  # Close the cursor
 
-print('Success! Script is finished.')
+# -------------------------------------- WRITE TO HISTORY TABLE --------------------------------------
+try:  # Check if table exists
+    pd.read_sql(f'SELECT * FROM {HISTORY_TABLE}', connection)
+except:
+    try:
+        cursor.execute(SQL_CREATE_STATEMENT_FROM_DATAFRAME(interpol_wanted_df, HISTORY_TABLE))
+        print(f'Table {HISTORY_TABLE} created')
+    except Exception as e:
+        print(f'Table {HISTORY_TABLE} not created')
+        print(e)
+finally:
+    try:
+        # Write the DataFrame to Oracle database 
+        insert_statements = SQL_INSERT_STATEMENT_FROM_DATAFRAME(interpol_wanted_df, HISTORY_TABLE)
+        for statement in insert_statements:
+            try:
+                cursor.execute(statement)
+                connection.commit()  # Commit the changes
+            except Exception as e:
+                print(e)
+        print(f'Done writing to {HISTORY_TABLE}.')
+
+    except Exception as e:
+        print(e)
+
+cursor.close()  # Close the cursor
+connection.close()

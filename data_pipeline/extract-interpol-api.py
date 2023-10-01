@@ -145,6 +145,8 @@ except:
         print(e)
 finally:
     try:
+        # Delete all records previously written
+        cursor.execute(f'DELETE FROM {TARGET_TABLE}')
         # Write the DataFrame to Oracle database 
         insert_statements = SQL_INSERT_STATEMENT_FROM_DATAFRAME(interpol_wanted_df, TARGET_TABLE)
         for statement in insert_statements:
