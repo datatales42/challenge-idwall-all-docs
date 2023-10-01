@@ -1,0 +1,196 @@
+# Link para nossa documentação: https://app.swaggerhub.com/apis/cgodevs/challenge-idwall/1.0.0
+
+# Caso o link para a documentação acima não esteja disponível, basta colar o conteúdo desse arquivo .yml no https://editor.swagger.io/ para visualizar nossa doc em Swagger.
+
+swagger: '2.0'
+info:
+  version: "1.0.0"
+  title: Idwall Background Check
+  description: A API opera sobre diversos parâmetros de busca para realizar o background check, trazendo uma lista de possíveis matches em relação aos dados informados, utilizando de um conjunto para gerar maiore assertividade. O filtro de busca para todos os parâmetros, exceto full_name que é definido por exact match, procura por dados que contenham a palavra da busca, não sendo equivalência exata para retornar um criminoso correspondente.
+paths:
+  /wanted:
+    get:
+      tags:
+        - Parâmetros de busca
+      description: Retorna lista de possíveis criminosos através de busca por conjunto de parâmetros.
+      operationId: getCriminalbyDescription
+      parameters:
+        - in: query
+          name: wanted_origin_id
+          type: string
+          description: ID do procurado na respectiva organização do registro (FBI ou pela Interpol); Este é o id do criminoso em nosso banco.
+        - in: query
+          name: alias
+          type: string
+          description: "Retorna lista de possíveis criminosos para uma busca por nome. (Coluna do banco de dados relacional: \"aliases\")"
+        - in: query
+          name: exact_match
+          type: boolean
+          description: Parâmetro opcional que deve ser informado junto do parâmetro “full_name”. A busca é feita para nomes estritamente iguais ao parâmetro full_name caso exact_match=true, caso seja igual a false, o nome é usado para trazer correspondências parciais, considerando o parâmetro uma substring dos registros correspondentes retornados.
+        - in: query
+          name: birthdate
+          type: string
+          description: "Adiciona o critério de data de nascimento na busca do indivíduo. (Coluna do banco de dados relacional: \"dates_of_birth_used\")"
+        - in: query
+          name: distinguishing_marks
+          type: string
+          description: Adiciona o critério de características físicas mais marcantes na busca do indivíduo. Separar itens com ponto e vírgula. 
+        - in: query
+          name: nationality
+          type: string
+          description: Adiciona o critério de nacionalidades na busca do indivíduo. Separar itens com ponto e vírgula.
+        - in: query
+          name: languages
+          type: string
+          description: Adiciona o critério do idioma falado na busca do indivíduo.
+        - in: query
+          name: sex
+          type: string
+          description: Sexo da pessoa procurada
+        - in: query
+          name: wanted_in
+          type: string
+          description: "País em busca (Coluna do banco de dados relacional: \"issuing_country_id\")"
+        - in: query
+          name: charges
+          type: string
+          description: Lista de acusações (separadas por vírgula)
+      responses:
+        '200':
+          description: Criminosos correspondentes à busca
+          schema:
+            type: array
+            items:
+              type: string
+              format: uri
+              example: {
+                          "potential_matches": [
+                            {
+                              "wanted_origin_id": "2023/50979",
+                              "alias": "Hussain Shifau",
+                              "charges": "<p>Forgery and Counterfeiting;Simulating Objects of Special Value;Theft by Deception;Money Laundering.</p>",
+                              "birthdate": "October 07, 1985",
+                              "nationality": "Maldives",
+                              "distinguishing_marks": "Mole on right cheek, black and grey hair, big eye brows",
+                              "wanted_in": "Maldives",
+                              "languages": "DIV; ENG",
+                              "eyes_color": "BRO",
+                              "forename": "Hussain",
+                              "hair_color": "GRY",
+                              "height": "1.75",
+                              "images": [
+                                          {
+                                            'thumb': 'https://ws-public.interpol.int/notices/v1/red/2023-50979/images/62819146', 
+                                            'large': 'https://ws-public.interpol.int/notices/v1/red/2023-50979/images/62819145'
+                                          }
+                                        ],
+                              "place_of_birth": "Maldives",
+                              "name": "Shifau",
+                              "sex": "Male",
+                              "weight": null,
+                              "wanted_origin": "INTERPOL",
+                              "age_range": "37 years old",
+                              "age_max": null,
+                              "age_min": null,
+                              "build": null,
+                              "complexion": null,
+                              "details": null,
+                              "eyes_raw": null,
+                              "field_offices": null,
+                              "hair_raw": null,
+                              "height_max": null,
+                              "height_min": null,
+                              "modified": null,
+                              "ncic": null,
+                              "occupations": null,
+                              "person_classification": null,
+                              "possible_countries": null,
+                              "possible_states": null,
+                              "poster_classification": null,
+                              "publication": null,
+                              "race": null,
+                              "race_raw": null,
+                              "remarks": null,
+                              "reward_text": null,
+                              "status": null,
+                              "subjects": null,
+                              "suspects": null,
+                              "title": null,
+                              "url": null,
+                              "warning_message": null,
+                              "weight_max": null,
+                              "weight_min": ,
+                              "analyzed_at": "2023-09-25 20:16:32"
+                            },
+                            {
+                              "wanted_origin_id": "6a10488a61644376a213fee9e5621f24",
+                              "alias": "Samuel L. Rose; Samuel Lee Rose, Jr.; Sam Rose; Samual Lee Rose; Black Sam Rose; \"Sammy\"; \"Sunny\"; \"Black\"; \"Black Sam\"",
+                              "charges": "<p>Samuel Lee Rose is wanted for his alleged involvement in a drug-trafficking operation in which large amounts of heroin, fentanyl, cocaine base, and cocaine hydrochloride were moved from Hagerstown, Maryland, to locations in Berkeley County, West Virginia, from August of 2020 to June of 2021. The drugs seized during the investigation amounted to 8.6 kilograms of cocaine, 1.02 kilograms of heroin, and 12 ounces of cocaine base \"crack.\" The drug enterprise allegedly involved a sophisticated operation including the use of a purported business to act as a front for drug-trafficking and the laundering of hundreds of thousands of dollars in drug proceeds. On July 20, 2021, a federal arrest warrant was issued for Rose in the United States District Court, Northern District of West Virginia, Martinsburg, West Virginia, after he was charged with multiple counts of drug-trafficking violations.</p><p></p><p></p>",
+                              "birthdate": "September 10, 1980",
+                              "nationality": "American",
+                              "distinguishing_marks": "Rose has a scar on his abdomen.",
+                              "wanted_in": "United States of America",
+                              "languages": null,
+                              "eyes_color": "brown",
+                              "forename": null,
+                              "hair_color": "black",
+                              "height": "1.98;2.06",
+                              "images": [
+                                          {
+                                            'large': 'https://www.fbi.gov/wanted/cei/samuel-lee-rose/@@images/image/large', 
+                                            'caption': None, 
+                                            'thumb': 'https://www.fbi.gov/wanted/cei/samuel-lee-rose/@@images/image/thumb', 
+                                            'original': 'https://www.fbi.gov/wanted/cei/samuel-lee-rose/@@images/image'
+                                            }
+                                        ],
+                              "place_of_birth": "Washington, D.C.",
+                              "sex": "Male",
+                              "weight": "165 to 190 pounds",
+                              "wanted_origin": "FBI",
+                              "name": null,
+                              "age_range": null,
+                              "age_max": null,
+                              "age_min": null,
+                              "build": null,
+                              "complexion": null,
+                              "details": null,
+                              "eyes_raw": "Brown",
+                              "field_offices": "pittsburgh",
+                              "hair_raw": "Black",
+                              "height_max": "2.06",
+                              "height_min": "1.98",
+                              "modified": "2023-09-20T15:56:04+00:00",
+                              "ncic": null,
+                              "occupations": null,
+                              "person_classification": "Main",
+                              "possible_countries": null,
+                              "possible_states": null,
+                              "poster_classification": "default",
+                              "publication": "2023-05-30T07:09:00",
+                              "race": "black",
+                              "race_raw": "Black",
+                              "remarks": "<p>Rose has ties to Martinsburg, West Virginia; Washington, D.C.; Baltimore, Maryland; and Prince Georges County, Maryland.</p>",
+                              "reward_text": "The FBI is offering a reward of up to $25,000 for information leading to the arrest and conviction of Samuel Lee Rose.",
+                              "status": null,
+                              "subjects": "Criminal Enterprise Investigations",
+                              "suspects": null,
+                              "title": "SAMUEL LEE ROSE",
+                              "url": null,
+                              "warning_message": "SHOULD BE CONSIDERED ARMED AND DANGEROUS",
+                              "weight_max": "190.0",
+                              "weight_min": "165.0"
+                            }
+                        ]
+                
+                    }
+        '400':
+          description: Modelo de retorno em carro de erro
+          schema:
+            type: array
+            items:
+              type: string
+              format: uri
+              example: {
+                          "code": "002",
+                          "error": Invalid parameters or values"
+                       }
