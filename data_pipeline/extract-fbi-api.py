@@ -40,7 +40,10 @@ fbi_wanted_df = pd.DataFrame()
 page = 1
 while True:
     response = requests.get('https://api.fbi.gov/wanted/v1/list', params={'page': page})
-    data = json.loads(response.content)
+    try:
+        data = json.loads(response.content)
+    except:
+        continue
 
     if data['total'] == 0 or data['items'] == []:
         print('No data left to fetch')
