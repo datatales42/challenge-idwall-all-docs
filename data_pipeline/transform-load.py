@@ -208,7 +208,7 @@ try:  # Check if table exists
     pd.read_sql(f'SELECT * FROM {TARGET_TABLE}', connection)
 except:
     try:
-        cursor.execute(SQL_CREATE_STATEMENT_FROM_DATAFRAME(interpol_wanted_df, TARGET_TABLE))
+        cursor.execute(SQL_CREATE_STATEMENT_FROM_DATAFRAME(merged_df, TARGET_TABLE))
         print(f'Table {TARGET_TABLE} created')
     except Exception as e:
         print(f'Table {TARGET_TABLE} not created')
@@ -239,7 +239,7 @@ try:  # Check if table exists
     pd.read_sql(f'SELECT * FROM {HISTORY_TABLE}', connection)
 except:
     try:
-        cursor.execute(SQL_CREATE_STATEMENT_FROM_DATAFRAME(interpol_wanted_df, HISTORY_TABLE))
+        cursor.execute(SQL_CREATE_STATEMENT_FROM_DATAFRAME(merged_df, HISTORY_TABLE))
         print(f'Table {HISTORY_TABLE} created')
     except Exception as e:
         print(f'Table {HISTORY_TABLE} not created')
