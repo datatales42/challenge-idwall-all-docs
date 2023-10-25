@@ -102,6 +102,7 @@ try:
     cursor = connection.cursor()
 except:  
     print('A connection error happened. Code will be exited.')
+    exit()
     pass
 
 # --------------------------- Get FBI Database to DataFrame --------------------------------
@@ -202,17 +203,6 @@ merged_df.replace("nan", np.nan, inplace=True)
 print('Success! Finished transforming and uniting data into a single dataframe.')
 
 
-# -------------------------------------- CONNECT TO ORACLE DATABASE --------------------------------------
-try:
-    cx_Oracle.init_oracle_client(lib_dir=lib_dir)
-except:  # may have been initialized already
-    pass
-
-dsn = cx_Oracle.makedsn(HOST, PORT, sid=SID)
-connection = cx_Oracle.connect(user=USERNAME, password=PASSWORD, dsn=dsn)
-cursor = connection.cursor()
-
-
 # -------------------------------------- WRITE TO PRODUCTION TABLE --------------------------------------
 try:  # Check if table exists
     pd.read_sql(f'SELECT * FROM {TARGET_TABLE}', connection)
@@ -227,13 +217,15 @@ finally:
     try:
         # Delete all records previously written
         cursor.execute(f'DELETE FROM {TARGET_TABLE}')
+        connection.commit()
 
         # Write the DataFrame to Oracle database 
-        insert_statements = SQL_INSERT_STATEMENT_FROM_DATAFRAME(interpol_wanted_df, TARGET_TABLE)
+        insert_statements = SQL_INSERT_STATEMENT_FROM_DATAFRAME(merged_df, TARGET_TABLE)
         for statement in insert_statements:
             try:
                 cursor.execute(statement)
                 connection.commit()  # Commit the changes
+                print("1 more line added to operational database.")
             except Exception as e:
                 print(e)
         print(f'Done writing to {TARGET_TABLE}')
@@ -255,11 +247,12 @@ except:
 finally:
     try:
         # Write the DataFrame to Oracle database 
-        insert_statements = SQL_INSERT_STATEMENT_FROM_DATAFRAME(interpol_wanted_df, HISTORY_TABLE)
+        insert_statements = SQL_INSERT_STATEMENT_FROM_DATAFRAME(merged_df, HISTORY_TABLE)
         for statement in insert_statements:
             try:
                 cursor.execute(statement)
                 connection.commit()  # Commit the changes
+                print("1 more line added to history database.")
             except Exception as e:
                 print(e)
         print(f'Done writing to {HISTORY_TABLE}.')

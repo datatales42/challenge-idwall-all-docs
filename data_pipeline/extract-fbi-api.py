@@ -40,9 +40,14 @@ fbi_wanted_df = pd.DataFrame()
 page = 1
 while True:
     response = requests.get('https://api.fbi.gov/wanted/v1/list', params={'page': page})
+    page += 1
     try:
         data = json.loads(response.content)
-    except:
+    except Exception as e:
+        print(e)
+        if page == 29:     # Loop safety check
+            print('Something\'s wrong, page iteration is at 99')
+            break    
         continue
 
     if data['total'] == 0 or data['items'] == []:
@@ -64,9 +69,8 @@ while True:
     fbi_wanted_df = pd.concat([fbi_wanted_df, df], axis=0, sort=True, ignore_index=True)
     
     print(f'FBI search page is: {page}')
-    page += 1
-    if page == 99:     # Loop safety check
-        print('Something\'s wrong, page iteration is at 99')
+    if page == 29:     # Loop safety check
+        print('Something\'s wrong, page iteration is at 29')
         break     
 
 print(f'Number of rows fetched from FBI is: {len(fbi_wanted_df)}')
