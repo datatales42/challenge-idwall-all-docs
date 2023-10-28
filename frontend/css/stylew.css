@@ -245,7 +245,7 @@ header {
 /* Estilo personalizado para o vídeo de fundo */
 video {
     position: fixed;
-    top: 60px;
+    top: 10px;
     /* Ajuste conforme necessário */
     left: 0;
     z-index: -1;
