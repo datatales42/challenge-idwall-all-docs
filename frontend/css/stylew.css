@@ -1,0 +1,406 @@
+header {
+    background-color: #520303;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilize a barra de navegação */
+.navbar-toggler-icon {
+    display: none;
+    border: none;
+    color: #ffffff00;
+}
+
+
+/* Estilize a lista de navegação */
+.navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    color: #ffffff;
+    /* Cor dos links de navegação */
+    margin-right: 35px;
+    transition: color 0.3s;
+    /*texto em maiúsculas */
+    text-transform: uppercase;
+    position: relative;
+    align-items: center;
+    /* Adicione uma posição relativa para os links */
+}
+
+/* Adicione uma barra de destaque antes do link */
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    transition: width 0.3s, transform 0.3s;
+    transform-origin: left;
+}
+
+/* Aumente o destaque quando o mouse pairar sobre o link */
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+    transform: scaleX(1.1);
+}
+
+/* Estilo para o item de ativação do dropdown */
+.nav-link.dropdown-toggle {
+    cursor: pointer;
+}
+
+/* Estilo para o menu dropdown */
+.dropdown-menu {
+    margin-left: -40px;
+    background-color: #520303;
+    /* Cor de fundo do menu dropdown */
+    box-shadow: 0 2px 5px #0000001a;
+    /* Sombra do menu dropdown */
+    width: 180px;
+    /* Largura do menu dropdown */
+}
+
+/* Estilo para os links no menu dropdown */
+.dropdown-item {
+    padding: 10px 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.dropdown-item a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bolder;   
+    color: #ffffff;
+}
+
+/* Estilo para os links no menu dropdown quando hover */
+.dropdown-item:hover {
+    color: #fff;
+    background-color: #660707;
+    /* Cor de fundo ao passar o mouse sobre os links */
+}
+
+/* Estilo para mostrar o menu dropdown ao passar o mouse sobre o item do menu */
+.show-on-hover:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+/* Estilize o logotipo */
+.logo_idwall {
+    max-width: 100px;
+    /* Tamanho máximo do logotipo */
+}
+
+.img_hamburger {
+    width: 35px;
+    margin-left: 80px;
+}
+
+.menu_hamburger {
+    cursor: pointer;
+
+}
+
+/* Estilos para o popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a5f26;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+/* Definindo a animação de entrada "Fade in from Right" */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+        /* Mude o valor de -20px para 20px para mover da direita */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Definindo a animação de saída "Fade Out Right" */
+@keyframes fadeOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(20px);
+        /* Mude o valor de -20px para 20px para mover para a direita */
+    }
+}
+
+.close-button {
+    position: absolute;
+    position: fixed;
+    top: 10px;
+    /* Ajuste a distância vertical conforme desejado */
+    right: 10px;
+    /* Ajuste a distância horizontal conforme desejado */
+    background: transparent;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #d8d8d8;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: auto;
+    background: #520303;
+    padding: 30px;
+    border-radius: 5px;
+    animation: fadeInRight 2s;
+}
+
+.menu.hide {
+    animation: fadeOutRight 1.5s;
+}
+
+.logo_idwall_mobile {
+    width: 100px;
+    text-align: center;
+    /* Centralize a logo horizontalmente */
+    margin-bottom: 5px;
+    /* Adicione espaço entre a logo e a lista */
+    margin-top: 20px;
+}
+
+.titulo_menu_mobile {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.menu .lista-popup {
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+    /* Exiba os itens verticalmente */
+    text-align: left;
+    /* Alinhe o texto à esquerda */
+}
+
+.menu .nav-item {
+    margin-bottom: 25px;
+    /* Adicione espaço entre os itens da lista */
+    text-align: left;
+    /* Alinhe o texto à esquerda */
+}
+
+.divider {
+    height: 1px;
+    /* Defina a altura da linha */
+    background-color: #ffffff;
+    /* Cor da linha (branca) */
+    margin: 20px 0;
+    /* Espaçamento acima e abaixo da linha */
+    border: none;
+}
+
+/* Estilize o título da página */
+.title {
+    font-size: 20px;
+    /* Tamanho da fonte */
+    font-weight: bold;
+    /* Peso da fonte em negrito */
+    margin-top: 20px;
+    /* Espaçamento superior */
+}
+
+/* Estilo personalizado para o vídeo de fundo */
+video {
+    position: fixed;
+    top: 60px;
+    /* Ajuste conforme necessário */
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ocupa toda a área do container */
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000bd;
+    /* Cor preta com opacidade de 0.82 */
+    z-index: -1;
+}
+
+/* Estilo personalizado para o container do logotipo e barra de busca */
+.logo_fbi_interpol,
+.barra_busca {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 350px;
+
+}
+
+.logo_interpol {
+    width: 160px;
+}
+
+.logo_fbi {
+    width: 130px;
+
+}
+
+.barra_busca {
+    width: 60%;
+    margin-top: 50px;
+}
+
+
+
+.form-control {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #922424;
+}
+
+.form-control:focus {
+    border: solid;
+    border-color:#520303; /* Defina a cor desejada quando estiver em foco */
+    box-shadow: none; /* Isso remove a sombra padrão que alguns navegadores aplicam em campos de foco */
+}
+
+.custom-button {
+    background-color: #520303;
+    /* Cor de fundo do botão */
+    color: #ffffff;
+    /* Cor do texto do botão */
+    padding: 10px 20px;
+    /* Preenchimento interno do botão */
+    border: none;
+    /* Remova a borda */
+    border-radius: 5px;
+    /* Borda arredondada */
+    text-transform: uppercase;
+    /* Transforme o texto em maiúsculas */
+    cursor: pointer;
+    /* Ícone de cursor de mão ao passar o mouse */
+}
+
+.custom-button:hover {
+    background-color: #660707;
+
+}
+
+.wantedData-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Estilo personalizado para as imagens do logotipo no cabeçalho de dados desejados */
+.wantedData-header-img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+/* Estilos para o popup */
+.popup-re {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000cc;
+    z-index: 999;
+}
+
+/* Estilos para o conteúdo do popup */
+.popup-re .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-height: 80%;
+    overflow: auto;
+}
+
+/* Estilos para a barra de rolagem do conteúdo */
+.wantedData {
+    padding-right: 15px;
+    /* Adicione espaço para a barra de rolagem vertical */
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilize o rodapé */
+footer {
+    background-color: #333;
+    /* Cor de fundo do rodapé */
+    color: white;
+    /* Cor do texto do rodapé */
+    text-align: center;
+    /* Centralize o texto no rodapé */
+    padding: 10px 0;
+    /* Preenchimento interno do rodapé */
+}

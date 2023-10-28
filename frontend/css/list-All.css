@@ -1,0 +1,50 @@
+.result {
+    margin-top: 50px;
+    width: 80%;
+    height: auto;
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 5;
+
+}
+
+.result h1 {
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #520303;
+    
+    /* O espaço entre o texto e o traço (opcional) */
+}
+#wanted {
+    background-color: #0a0a0a;
+    
+}
+
+#wanteds {
+    background-color: #ffffff;
+    height: 657px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    border: 1px solid #0a0a0a;
+    
+    padding: 30px;
+    gap: 1px;
+}
+
+
+#wanteds p {
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+    /* Adicione um traço de 1 pixel de espessura e cor preta */
+    padding-bottom: 5px;
+    /* O espaço entre o texto e o traço (opcional) */
+}

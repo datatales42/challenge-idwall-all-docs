@@ -1,0 +1,168 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.popup-header {
+    background: red;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-header img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+/* Estilos base */
+/*
+.wantedData-header {
+    margin-top: -350px;
+    width: 50%;
+    height: 80vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 5;
+    display: none; Inicialmente, oculte o elemento
+}
+*/
+
+/*
+.close-button-card {
+    position: absolute;
+    top: 50px; Ajuste a distância vertical conforme desejado
+    right: 460px; Ajuste a distância horizontal conforme desejado
+    background: transparent;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    color: #520303; Cor do botão de fechamento
+    font-weight: 900;
+    cursor: pointer;
+}
+*/
+
+/*
+.close-button-card:hover {
+    color: #ff0000; Cor quando o botão de fechamento é hover
+}
+*/
+
+/*
+.wantedData-header-img-wanted {
+    width: 150px;
+    margin-right: 600px;
+    margin-top: 85px;
+    transform: rotate(-45deg);
+}
+*/
+
+/*
+#wantedData {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 500px;
+    max-height: 500px; Defina a altura máxima desejada
+    overflow-y: auto; Adicione rolagem vertical quando necessário
+    word-wrap: break-word;
+    background-color: #ffffff00;
+    padding: 20px;
+    margin-top: 20px;
+}
+*/
+
+/*
+#wantedData p {
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #000; Adicione um traço de 1 pixel de espessura e cor preta
+    padding-bottom: 5px; O espaço entre o texto e o traço (opcional)
+}
+*/
+
+/*
+.wantedData-header-img {
+    width: 100px;
+    margin-top: 20px;
+}
+*/
+
+/* Media queries para estilos responsivos */
+/*
+@media (max-width: 768px) {
+    .wantedData-header {
+        width: 80%;
+        margin-top: -250px;
+    }
+
+    .close-button-card {
+        position: fixed;
+        top: 20px; Posição fixa na parte superior da tela
+        right: 20px; Posição fixa à direita da tela
+        font-size: 30px;
+    }
+
+    .wantedData-header-img-wanted {
+        margin-right: 10px;
+        margin-top: 85px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wantedData-header {
+        width: 90%;
+        margin-top: -150px;
+    }
+
+    .close-button-card {
+        position: fixed;
+        top: 20px; Posição fixa na parte superior da tela
+        right: 20px; Posição fixa à direita da tela
+        font-size: 24px;
+    }
+
+    .wantedData-header-img-wanted {
+        margin-right: 10px;
+        margin-top: 70px;
+    }
+}
+*/

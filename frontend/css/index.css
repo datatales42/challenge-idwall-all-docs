@@ -1,0 +1,153 @@
+
+/* Estilos para a primeira seção com o vídeo de fundo */
+.first-section {
+    height: 100vh;
+    position: relative; /* Para posicionar elementos filhos relativamente à seção pai */
+    background: url(./assets/1025.mp4) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Sobreposição de fundo */
+.first-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.705); /* Cor da sobreposição com transparência */
+}
+
+/* Estilos para o conteúdo da primeira seção */
+.first-section h1, .first-section p {
+    color: #fff; /* Define a cor do texto para ser visível na sobreposição */
+}
+
+
+/*estilo do containerda esquerda da seção 1 */
+.left-container {
+    padding: 30px;
+    margin-top: 150px;
+    height: 90vh;
+}
+
+@media screen and (max-width: 448px) {
+    .left-container {
+        padding: 30px;
+        height: 90vh;
+    }
+}
+
+.title-first-section {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2.9rem;
+    color: #fff;
+}
+
+.span-first-section {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 2.9rem;
+    color: #cf0000ee;
+}
+
+.paragraph-first-section {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.first-section-lft-container-button button {
+    border-color: #520303;
+    font-size: 17px;
+    background-color: #520303;
+
+}
+
+.first-section-lft-container-button button:hover {
+    background-color: #660707;
+    border-color: #520303;
+    font-size: 17px;
+}
+
+/*estilo da segunda seção*/
+.second-section {
+    background-color: #fff;
+}
+
+.second-section .lft-container {
+    padding: 30px;
+    height: 700px;
+}
+
+.second-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #520303;
+}
+
+.second-section h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #520303;
+    
+}
+
+.second-section p {
+    margin-top: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+
+.second-section .rgt-container {
+    padding: 30px;
+    height: 700px;
+    
+}
+
+.rgt-container img {
+    border-radius: 30px;
+    width: 450px;
+}
+
+.third-section {
+    height: 100vh;
+    background: url(/assets/timeline-04.jpg) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    background-color: #202020;
+}
+.third-section::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6); /* Cor da sobreposição preta com transparência */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.third-rgt-container {
+    padding: 30px;
+    height: 700px;
+    z-index: 1;
+}
+
+.third-rgt-container h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.third-rgt-container p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #fff;
+
+}

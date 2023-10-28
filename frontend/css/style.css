@@ -1,0 +1,297 @@
+header {
+    background-color: #520303;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #520303;
+    color: white;
+}
+
+.logo_idwall {
+    width: 100px;
+    margin-left: 80px;
+}
+
+.lista_menu {
+    margin-left: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    transition: width 0.3s, transform 0.3s;
+    transform-origin: left;
+}
+
+nav a:hover::before {
+    width: 100%;
+    transform: scaleX(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        top: 70px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: flex;
+    }
+}
+
+.img_hamburger {
+    width: 50px;
+    margin-right: 80px;
+}
+
+/* Estilos para o ícone de hambúrguer */
+.menu_hamburger {
+    cursor: pointer;
+    
+}
+
+/* Estilos para o popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+/* Definindo a animação de entrada "Fade in from Right" */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px); /* Mude o valor de -20px para 20px para mover da direita */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Definindo a animação de saída "Fade Out Right" */
+@keyframes fadeOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(20px); /* Mude o valor de -20px para 20px para mover para a direita */
+    }
+}
+
+.close-button {
+    position: absolute;
+    position: fixed;
+    top: 10px; /* Ajuste a distância vertical conforme desejado */
+    right: 10px; /* Ajuste a distância horizontal conforme desejado */
+    background: transparent;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 900;
+    cursor: pointer;
+}
+.close-button:hover {
+    color: #d8d8d8;
+}
+
+.titulo_menu_mobile {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 265px;
+    height: 600px;
+    background: #520303;
+    padding: 20px;
+    border-radius: 5px;
+    animation: fadeInRight 2s;
+}
+
+.menu.hide {
+    animation: fadeOutRight 1.5s;
+}
+
+.logo_idwall_mobile {
+    width: 100px;
+    text-align: center; /* Centralize a logo horizontalmente */
+    margin-bottom: 5px; /* Adicione espaço entre a logo e a lista */
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    flex-direction: column; /* Exiba os itens verticalmente */
+    text-align: left; /* Alinhe o texto à esquerda */
+}
+
+.menu li {
+    margin-bottom: 25px; /* Adicione espaço entre os itens da lista */
+    text-align: left; /* Alinhe o texto à esquerda */
+}
+
+
+.divider {
+    height: 1px; /* Defina a altura da linha */
+    background-color: white; /* Cor da linha (branca) */
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+    border: none;
+}
+
+.page_view {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0;
+    padding: 20px;
+    height: 85vh;
+}
+
+.page_view video {
+    position: fixed;
+    top: 60px; /* Ajuste conforme necessário */
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.page_view::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.82); /* Cor preta com opacidade de 0.82 */
+    z-index: 0;
+}
+
+@media(min-aspect-ratio: 16/9) {
+    .page_view video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.logo_fbi_interpol {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    max-width: 1200px; /* Defina a largura máxima desejada */
+    margin: 0 auto; /* Isso centralizará o container na página */
+    padding: 20px;
+    z-index: 1;
+}
+
+.logo_fbi {
+    width: 12%;
+}
+
+.logo_interpol {
+    width: 13%;
+}
+
+.barra_busca {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    z-index: 1;
+}
+
+#searchInput {
+    width: 100%; /* Ocupa toda a largura do container .barra_busca */
+    max-width: 1200px; /* Define a largura do input para 1140 pixels */
+    padding: 17px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(146, 36, 36); /* Define a cor do texto para branco */
+    background-color: white; /* Remove o fundo do input (pode personalizar conforme necessário) */
+    z-index: 0;
+}
+
+.custom-button {
+    background-color: #500101;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 19px 40px;
+    margin-left: 10px; /* Adiciona espaço entre o campo de pesquisa e o botão */
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: rgb(75, 8, 8);
+}
+
+.page_view .container {
+    width: 100%;
+}

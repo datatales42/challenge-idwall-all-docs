@@ -1,0 +1,190 @@
+/* Estilos base */
+
+.scrollable-area{
+    flex-direction: column;
+    overflow: scroll;
+    height: 80vh;
+}
+
+.wantedData-header {
+    margin-top: 50px;
+    width: 40%;
+    height: 80vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 5;
+    display: none; /* Inicialmente, oculte o elemento */
+}
+
+.wantedData-header-form {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 5;
+    display: none; /* Inicialmente, oculte o elemento */
+}
+
+.close-button-card {
+    position: absolute;
+    top: 50px; /* Ajuste a distância vertical conforme desejado */
+    right: 460px; /* Ajuste a distância horizontal conforme desejado */
+    background: transparent;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    color: #520303; /* Cor do botão de fechamento */
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.close-button-card:hover {
+    color: #ff0000; /* Cor quando o botão de fechamento é hover */
+}
+
+.wantedData-header-img-wanted {
+    width: 150px;
+    height: 50px;  
+}
+
+#wantedData {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 500px;
+    max-height: 500px; /* Defina a altura máxima desejada */
+    overflow-y: auto; /* Adicione rolagem vertical quando necessário */
+    word-wrap: break-word;
+    background-color: #ffffff00;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid;
+}
+
+#wantedData p {
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #000; /* Adicione um traço de 1 pixel de espessura e cor preta */
+    padding-bottom: 5px; /* O espaço entre o texto e o traço (opcional) */
+}
+
+#wantedDataContent {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 500px;
+    max-height: 500px; /* Defina a altura máxima desejada */
+    overflow-y: auto; /* Adicione rolagem vertical quando necessário */
+    word-wrap: break-word;
+    background-color: #ffffff00;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid;
+}
+
+#wantedDataContent p {
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;    
+}
+
+.content-wanted-image{
+    width: 30%;
+    height: 30%;
+}
+
+.wantedData-header-img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.logo-container {
+    width: 90%;
+    display: flex; /* Exibir os logos em uma linha horizontal */
+    align-items: center; /* Alinhar os logos verticalmente ao centro, se necessário */
+}
+
+
+.logo-container h2 {
+    margin-left: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.2rem;
+    color: #520303;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.logo-container button {
+    margin-left: 50px;
+    width: 30px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #520303;
+    background-color: #52030300;
+}
+
+
+
+.logo-container button:hover {
+    color: #ff0000;
+}
+
+#error-message {
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #ff0000;
+}
+
+@media (max-width: 768px) {
+    .wantedData-header {
+        width: 80%;
+        margin-top: 50px;
+    }
+
+    .close-button-card {
+        position: fixed;
+        top: 20px; /* Posição fixa na parte superior da tela */
+        right: 20px; /* Posição fixa à direita da tela */
+        font-size: 30px;
+    }
+
+    .wantedData-header-img-wanted {
+        margin-right: 10px;
+        margin-top: 85px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wantedData-header {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .close-button-card {
+        position: fixed;
+        top: 20px; /* Posição fixa na parte superior da tela */
+        right: 20px; /* Posição fixa à direita da tela */
+        font-size: 24px;
+    }
+
+    .wantedData-header-img-wanted {
+        margin-right: 10px;
+        margin-top: 70px;
+    }
+}
