@@ -1,9 +1,11 @@
 # Frontend Styles
-https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/f28b7d31-81e7-41f7-80f3-6353c3051137
 
-https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/e1c33da3-652f-4ae2-a86d-f6e16dd82a49
+https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/556a7a0b-b493-4a31-b761-ee4ff885ff10
 
-# <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/36710913-1c77-4faa-a718-bdb66f453c87' width='30'> <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/98653fc5-fc98-4267-b7d6-a39859184f22' width='30'> Description
+https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/589c7097-2a7e-4d67-8eb7-6c2d0da1fb09
+
+
+# <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/1b989a7d-1e76-4564-bbb5-085739f18d1b' width='30'> <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/00cf004d-7151-4d38-bcdf-f60823bbd45a' width='30'> Description
 This is a repository for presenting submission for a challenge presented by IdWall in conjunction with FIAP college, by the contributing members of this project. Every documentation file, videos, and scripts to populate the database may be found.
 
 ## 🤔❓ Challenge 
@@ -30,8 +32,8 @@ Each team should create a detailed documentation (PPT or PDF) of the Web Scrapin
 **Part 2: Implementation and Presentation**<br/>
 Upon completing the implementation, each team should provide the source code (zip) that demonstrates the data acquisition from the FBI and Interpol websites, the database update, and the integration with the API. Furthermore, prepare a presentation (video) to demonstrate how the API is now active and offering dynamic information to users (Oracle Database / Java or .NET).
 
-Idwall's reference service 
-![image](https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/e25ef7d9-bf2a-4f57-bf37-079fe3faea7f)
+Idwall's reference service <br/>
+<img width="714" alt="image" src="https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/4e6d9e4e-e6cc-4905-8e35-701cca0c7f0f">
 
 ## 💡 Solution Architecture
 
@@ -63,11 +65,9 @@ Idwall's reference service
 
 *Note: It's important to install the cx_Oracle Python module and the Oracle client on your machine to execute the scripts, as well as to change the path to your unzipped folder directly in the code (indication in the code itself).*
 
-
-
 <hr>
 
-# <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/08582651-b02a-418a-8794-5b90b91dd28a' width='30'> <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/655c122a-0724-4c5c-8478-784d668a5b35' width='30'> Descrição
+# <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/a07bb01a-33b3-4873-9fd5-e35dd4c2b6de' width='30'> <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/5742b37a-45c5-4e70-9e47-b933c353dc44' width='30'> Descrição
 Este é um repositório para exposição da entrega para um desafio apresentado pela empresa IdWall em conjunto com a faculdade FIAP, pelos membros contribuidores deste projeto. Aqui estão todos os arquivos de documentação, vídeos e scripts para popular os banco de dados.
 
 ## 🤔❓ Desafio 
@@ -91,8 +91,9 @@ Cada equipe deve criar uma documentação detalhada (PPT ou PDF) das técnicas d
 **Parte 2: Implementação e Apresentação**<br/>
 Após a conclusão da implementação, cada equipe deve fornecer o código-fonte (zip) que demonstre a aquisição de dados dos sites do FBI e Interpol, a atualização do banco de dados e a integração com a API. Além disso, preparem uma apresentação (vídeo) para demonstrar como a API agora está ativa e oferecendo informações dinâmicas aos usuários (Banco de Dados Oracle / Java ou .NET).<br/><br/>
 
-Serviço análogo de referência da IdWall
-![image](https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/e25ef7d9-bf2a-4f57-bf37-079fe3faea7f)
+Serviço análogo de referência da IdWall <br/>
+<img width="714" alt="image" src="https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/4e6d9e4e-e6cc-4905-8e35-701cca0c7f0f">
+
 
 
 ## 💡 Arquitetura da Solução
