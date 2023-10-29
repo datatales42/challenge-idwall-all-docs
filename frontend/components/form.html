@@ -20,8 +20,9 @@
                     <img src="/assets/logo_idwall.png" class="logo_idwall" alt="">
                 </div>
 
-                <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -46,9 +47,9 @@
                         <!--<li class="nav-item"><a class="nav-link" href="./components/search-name.html">Search by Name</a>
                         </li>                  
                         <li class="nav-item"><a class="nav-link" href="#">List all</a></li>-->
-                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/service.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/about-us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="menu_hamburger">
@@ -63,14 +64,16 @@
                         <h1 class="titulo_menu_mobile">Menu</h1>
                         <div class="divider"></div>
                         <ul class="lista-popup navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Search by ID</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./components/search-name.html">Search by Name</a>
+                            <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/components/search-id.html">Search by ID</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#">List all</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/components/search-name.html">Search by
+                                    Name</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="/components/list-All.html">List all</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/components/service.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/components/about-us.html">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/components/contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -81,12 +84,11 @@
             <video autoplay loop muted plays-inline>
                 <source src="../assets/back.mp4" type="video/mp4">
             </video>
-            
+            <div class="overlay"></div>
+
             <div class="container" id="form-results">
                 <div class="mt-5 mb-5 d-flex justify-content-md-around align-items-center">
-                    <img src="../assets/FBI_SHIELD-logo-2D02BDDAC8-seeklogo.com.png" class="logo_fbi img-fluid" alt="FBI Logo"
-                        loading="eager">
-                    <img src="../assets/INTERPOL_Logo.png" class="logo_interpol img-fluid" alt="INTERPOL Logo" loading="eager">
+
                 </div>
                 <div class="row">
                     <div class="col-md-3">
@@ -94,16 +96,21 @@
                             <div class="search-name-parameters form-group">
                                 <input type="text" id="searchName" class="form-control mb-" placeholder="Name" />
 
-                                <input onclick="toggleRadioSelection()" class="form-check-input mb-3" type="radio" value="equals" id="exact-match-true">
-                                <label class="form-check-label text-white" for="exact-match-true"> equals </label>
+                                <input onclick="toggleRadioSelection()" class="form-check-input mb-3" type="radio"
+                                    value="equals" id="exact-match-true">
+                                <label class="form-check-label" for="exact-match-true"> equals </label>
 
-                                <input onclick="toggleRadioSelection()" class="form-check-input mb-3" type="radio" value="contains" id="exact-match-false" checked>
-                                <label class="form-check-label text-white" for="exact-match-false"> contains </label>
+                                <input onclick="toggleRadioSelection()" class="form-check-input mb-3" type="radio"
+                                    value="contains" id="exact-match-false" checked>
+                                <label class="form-check-label" for="exact-match-false"> contains </label>
 
                             </div>
-                            <input type="text" id="searchBirthDate" class="form-control mb-3" placeholder="Birth Date" />
-                            <input type="text" id="searchMarks" class="form-control mb-3" placeholder="Distinguishing Marks" />
-                            <input type="text" id="searchNationality" class="form-control mb-3" placeholder="Nationality" />
+                            <input type="text" id="searchBirthDate" class="form-control mb-3"
+                                placeholder="Birth Date" />
+                            <input type="text" id="searchMarks" class="form-control mb-3"
+                                placeholder="Distinguishing Marks" />
+                            <input type="text" id="searchNationality" class="form-control mb-3"
+                                placeholder="Nationality" />
                             <input type="text" id="searchLanguages" class="form-control mb-3" placeholder="Languages" />
                             <input type="text" id="searchSex" class="form-control mb-3" placeholder="Sex" />
                             <input type="text" id="searchWantedIn" class="form-control mb-3" placeholder="Wanted In" />
@@ -112,21 +119,21 @@
                         </form>
                         <h5 id="num-matches-found" class="text-white mt-2 mb-2 text-center"></h5>
                     </div>
-                    
+
                     <div class="col-md-9 border rounded p-3 scrollable-area">
                         <div id="real-content">
-                            <!-- MATCHING CONTENT GOES HERE -->                            
+                            <!-- MATCHING CONTENT GOES HERE -->
                         </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6 mt-2 d-flex justify-content-center align-items-center">
-                                    <P id="error-message" ></P>
+                                    <P id="error-message"></P>
                                 </div>
                             </div>
-                        </div>        
+                        </div>
                     </div>
                 </div>
-            </div>                    
+            </div>
         </div>
     </div>
 
@@ -141,7 +148,7 @@
         crossorigin="anonymous"></script>
     <script src="/js/popup.js"></script>
     <script src="/js/fetchFormData.js"></script>
-    
+
 
 </body>
 

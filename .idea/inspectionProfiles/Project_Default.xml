@@ -1,0 +1,23 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="monitoring_utils.MonitoringSettings.control_removal_action" />
+          <option value="monitoring_utils.MonitoringSettings.monitored_changes" />
+          <option value="monitoring_utils.MonitoringSettings.controls_option" />
+          <option value="monitoring_utils.MonitoringSettings.condition_change_action" />
+          <option value="monitoring_utils.MonitoringSettings.conditions" />
+          <option value="monitoring_utils.MonitoringSettings.full_table_name" />
+          <option value="monitoring_utils.MonitoringSettings.monitors" />
+          <option value="monitoring_classes.MonitoringSettings.conditions" />
+          <option value="monitoring_classes.MonitoringSettings.other_reported_conditions" />
+          <option value="monitoring_classes.MonitoringSettings.monitors" />
+          <option value="monitoring_classes.MonitoringSettings.monitoring_title" />
+          <option value="monitoring_classes.MonitoringSettings.controls_option" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search By Name</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/stylew.css">
+    <link rel="stylesheet" href="/css/cardResult.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/service.css">
+</head>
+
+<body>
+    <header class="text-white py-3 fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <div class="d-flex align-items-center">
+                <a href="/index.html">
+                    <img src="/assets/logo_idwall.png" class="logo_idwall" alt="">
+                </a>
+            </div>
+
+            <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <!--<li class="nav-item"><a class="nav-link" href="#">Search by ID</a></li>-->
+                    <li class="nav-item dropdown show-on-hover">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Searches
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="searchesDropdown">
+                            <a class="dropdown-item" href="/components/form.html">Search Form</a>
+                            <a class="dropdown-item" href="/components/search-id.html">Search by ID</a>
+                            <a class="dropdown-item" href="/components/search-name.html">Search by Name</a>
+                            <a class="dropdown-item" href="/components/list-All.html">List all</a>
+                        </div>
+                    </li>
+
+                    <!--<li class="nav-item"><a class="nav-link" href="./components/search-name.html">Search by Name</a>
+                    </li>                  
+                    <li class="nav-item"><a class="nav-link" href="#">List all</a></li>-->
+                    <li class="nav-item"><a class="nav-link" href="/components/service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/components/about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/components/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="menu_hamburger">
+                <img src="../assets/menu-aberto.png" class="img_hamburger" alt="">
+            </div>
+            <div class="popup" id="menuPopup">
+                <div class="menu">
+                    <button class="close-button">X</button>
+                    <div class="logo_idwall">
+                        <img src="../assets/logo_idwall.png" class="logo_idwall_mobile" alt="Logo">
+                    </div>
+                    <h1 class="titulo_menu_mobile">Menu</h1>
+                    <div class="divider"></div>
+                    <ul class="lista-popup navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/search-id.html">Search by ID</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/search-name.html">Search by Name</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/components/list-All.html">List all</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/service.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/about-us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section service-section-cim">
+            <div class="overlay-serv"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center cim-container">
+                        <div>
+                            <h2>Proactive Security: Detect Threats from Malicious Users.</h2>
+                            <p>Proactive Security for Your Operation. Prevent Issues Before They Occur. With our
+                                solution, you can anticipate malicious actions by assessing the risk associated with
+                                emails, phone numbers, CPF (individual taxpayer identification numbers), and addresses.
+                                Strengthen your anti-fraud strategy and ensure secure transactions and integrations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center align-items-center cim-dir-container">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section service-section-bai">
+            <h1>Our Services</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center bai-container">
+                        <div>
+                            <h2>Document Verification</h2>
+                            <p> Idwall verifies the authenticity of documents such as RG (Identity Card), CPF
+                                (Individual Taxpayer Identification Number), CNH (Driver's License), and proof of
+                                residence, assisting companies in ensuring they are dealing with legitimate information
+                                and real identities.</p>
+                            <h2>Risk Analysis</h2>
+                            <p>Through risk analysis, Idwall assesses the reliability of information provided by
+                                individuals, aiding in real-time decision-making, such as the approval of financial
+                                transactions.</p>
+                            <h2>Digital Onboarding</h2>
+                            <p>Idwall offers digital onboarding solutions for businesses, allowing them to expedite
+                                customer integration by securely and swiftly verifying identity information.</p>
+                            <h2>Fraud Detection</h2>
+                            <p>Idwall employs advanced techniques to identify potential fraud, such as verifying
+                                inconsistent or suspicious information, aiding in protection against fraudulent
+                                activities.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-center align-items-center bai-dir-container">
+                        <div>
+                            <h2>Email and Phone Number Validation</h2>
+                            <p> The company validates the legitimacy of email addresses and phone numbers, helping
+                                reduce the occurrence of false or non-existent information in customer databases.</p>
+                            <h2>Background Check</h2>
+                            <p> Idwall conducts background checks, including criminal history and sanctions list
+                                queries, to ensure companies have complete and accurate information about their
+                                customers.</p>
+                            <h2>Compliance</h2>
+                            <p>The company assists with compliance with regulations and laws by providing verification
+                                tools that help businesses meet legal and regulatory requirements.</p>
+                            <h2>Anti-Money Laundering (AML)</h2>
+                            <p>Idwall helps businesses identify suspicious activities that may indicate money
+                                laundering, thereby ensuring the integrity of financial transactions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="fot-div">
+        <div class="fot-div-contact-dir">
+            <h2>Location</h2>
+            <ul>
+                <li>Av. Lins de Vasconcelos, 1222</li>
+                <li>Av. Paulista, 1106 - 7º andar</li>
+                <li>7th floor - Torre A, R. Fidêncio Ramos, 308</li>
+            </ul>
+        </div>
+        <div class="fot-div-contact-esq">
+            <h2>Contact</h2>
+            <ul>
+                <li>(11) 3385-8010</li>
+                <li>idwall.co</li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer-class-ind">
+        <div class="container">
+            <p>&copy; 2023 copyright - Developed by DataTales.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="/js/popup.js"></script>
+
+
+</body>
+
+</html>

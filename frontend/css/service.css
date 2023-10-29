@@ -1,0 +1,101 @@
+.service-section-cim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(/assets/conexao-de-formas-geometricas-azuis-do-plexo-abstrato-imagem-gerada-por-ai.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    background-color: #202020;
+    height: 100vh;
+}
+
+.overlay-serv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000057;
+    /* Cor preta com opacidade de 0.82 */
+    z-index: 1;
+}
+
+.cim-container {
+    height: 500px;
+    z-index: 2;
+   
+}
+
+.cim-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.cim-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.service-section-bai {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e6e6e6;
+    height: 90vh;
+}
+
+.service-section-bai h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #361f1f;
+}
+
+.bai-container {
+    background-color: #ffffff;
+    height: auto;
+    padding: 30px;
+    z-index: 2;
+}
+
+.bai-container h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #361f1f;
+}
+
+.bai-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #361f1f;
+
+}
+
+.bai-dir-container {
+    background-color: #ffffff;
+    height: auto;
+    padding: 30px;
+    z-index: 2;
+}
+
+.bai-dir-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #361f1f;
+}
+
+.bai-dir-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #361f1f;
+}
+

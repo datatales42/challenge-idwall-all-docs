@@ -82,7 +82,7 @@ function fetchData() {
                 document.getElementById('error-message').style.display = 'none';
             } else {
                 // Exiba a mensagem de erro
-                document.getElementById('error-message').textContent = 'Registro não encontrado.';
+                document.getElementById('error-message').textContent = 'Record not found.';
                 document.getElementById('error-message').style.display = 'block';
                 // Oculte a classe "wantedData-header"
                 document.querySelector('.wantedData-header').style.display = 'none';

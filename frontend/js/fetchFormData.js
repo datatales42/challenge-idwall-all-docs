@@ -42,7 +42,7 @@ function fetchFormData() {
     var url = 'http://localhost:8080/wanteds';
     var parameters = [
         { key: 'alias', value: alias },
-        { key: 'birthdate', value: birthdate },
+        { key: 'birth_date', value: birthdate },
         { key: 'distinguishing_marks', value: distinguishing_marks },
         { key: 'nationality', value: nationality },
         { key: 'languages', value: languages },

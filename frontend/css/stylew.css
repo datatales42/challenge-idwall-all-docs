@@ -404,3 +404,9 @@ footer {
     padding: 10px 0;
     /* Preenchimento interno do rodapé */
 }
+
+#form-results {
+    margin-top: -40px;
+    background-color: #fff;
+    border-radius: 30px;
+}

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search By Name</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/stylew.css">
+    <link rel="stylesheet" href="/css/cardResult.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+
+<body>
+    <header class="text-white py-3 fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <div class="d-flex align-items-center">
+                <a href="/index.html">
+                    <img src="/assets/logo_idwall.png" class="logo_idwall" alt="">
+                </a>
+            </div>
+
+            <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <!--<li class="nav-item"><a class="nav-link" href="#">Search by ID</a></li>-->
+                    <li class="nav-item dropdown show-on-hover">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Searches
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="searchesDropdown">
+                            <a class="dropdown-item" href="/components/form.html">Search Form</a>
+                            <a class="dropdown-item" href="/components/search-id.html">Search by ID</a>
+                            <a class="dropdown-item" href="/components/search-name.html">Search by Name</a>
+                            <a class="dropdown-item" href="/components/list-All.html">List all</a>
+                        </div>
+                    </li>
+
+                    <!--<li class="nav-item"><a class="nav-link" href="./components/search-name.html">Search by Name</a>
+                    </li>                  
+                    <li class="nav-item"><a class="nav-link" href="#">List all</a></li>-->
+                    <li class="nav-item"><a class="nav-link" href="/components/service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/components/about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/components/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="menu_hamburger">
+                <img src="../assets/menu-aberto.png" class="img_hamburger" alt="">
+            </div>
+            <div class="popup" id="menuPopup">
+                <div class="menu">
+                    <button class="close-button">X</button>
+                    <div class="logo_idwall">
+                        <img src="../assets/logo_idwall.png" class="logo_idwall_mobile" alt="Logo">
+                    </div>
+                    <h1 class="titulo_menu_mobile">Menu</h1>
+                    <div class="divider"></div>
+                    <ul class="lista-popup navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/search-id.html">Search by ID</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/search-name.html">Search by Name</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/components/list-All.html">List all</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/service.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/about-us.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/components/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="container form-contact">
+                <h1 class="mt-5">Formulário de Contato</h1>
+                <form class="contact-form">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <div class="fot-div">
+        <div class="fot-div-contact-dir">
+            <h2>Location</h2>
+            <ul>
+                <li>Av. Lins de Vasconcelos, 1222</li>
+                <li>Av. Paulista, 1106 - 7º andar</li>
+                <li>7th floor - Torre A, R. Fidêncio Ramos, 308</li>
+            </ul>
+        </div>
+        <div class="fot-div-contact-esq">
+            <h2>Contact</h2>
+            <ul>
+                <li>(11) 3385-8010</li>
+                <li>idwall.co</li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer-class-ind">
+        <div class="container">
+            <p>&copy; 2023 copyright - Developed by DataTales.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="/js/popup.js"></script>
+    <script src="/js/fetchDataByName.js"></script>
+
+
+</body>
+
+</html>

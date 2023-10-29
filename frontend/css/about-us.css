@@ -1,0 +1,184 @@
+.aboult-section-cim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(/assets/Design\ sem\ nome\ \(12\).jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    background-color: #202020;
+    height: 100vh;
+}
+
+.overlay-serv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000057;
+    /* Cor preta com opacidade de 0.82 */
+    z-index: 1;
+}
+
+.aboult-esq-container {
+    padding: 30px;
+    width: 500px;
+    height: auto;
+    z-index: 1;
+}
+
+.aboult-esq-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ffffff;
+    
+}
+
+.aboult-esq-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    
+}
+
+.aboult-section-bai {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    height: 70vh;
+    background-color: #ffffff;
+}
+
+.aboult-section-bai h1 {
+    margin-top: -150px;
+    text-align: center;
+}
+
+.aboult-bai-esq-container img{
+    width: 70%;
+    border-radius: 25px;
+}
+
+.aboult-bai-dir-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ed145b;
+}
+
+.aboult-bai-dir-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1d1d1d;
+
+}
+
+.aboult-bai-dir-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1d1d1d;
+}
+
+.aboult-section-lu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    height: 70vh;
+    background-color: #ffffff;
+}
+
+.aboult-lu-dir-container img{
+    width: 70%;
+    border-radius: 25px;
+}
+
+.aboult-lu-esq-container h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ed145b;
+}
+
+.aboult-lu-esq-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1d1d1d;
+}
+
+.aboult-lu-esq-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1d1d1d;
+}
+
+.aboult-section-pe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    height: 70vh;
+    background-color: #ffffff;
+}
+
+.aboult-pe-esq-container img{
+    width: 70%;
+    border-radius: 25px;
+
+}
+
+.aboult-pe-dir-container h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ed145b;
+}
+
+.aboult-pe-dir-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1d1d1d;
+}
+
+.aboult-pe-dir-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1d1d1d;
+}
+
+.aboult-section-ke {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    height: 70vh;
+    background-color: #ffffff;
+}
+
+.aboult-ke-dir-container img {
+    width: 70%;
+    border-radius: 25px;
+}
+
+.aboult-ke-esq-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ed145b;
+}
+
+.aboult-ke-esq-container h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1d1d1d;
+}
