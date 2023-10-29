@@ -1,3 +1,7 @@
+# Frontend Styles
+https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/f28b7d31-81e7-41f7-80f3-6353c3051137
+
+https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/e1c33da3-652f-4ae2-a86d-f6e16dd82a49
 
 # <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/36710913-1c77-4faa-a718-bdb66f453c87' width='30'> <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/98653fc5-fc98-4267-b7d6-a39859184f22' width='30'> Description
 This is a repository for presenting submission for a challenge presented by IdWall in conjunction with FIAP college, by the contributing members of this project. Every documentation file, videos, and scripts to populate the database may be found.
