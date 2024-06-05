@@ -6,7 +6,7 @@ https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/589c709
 
 
 # <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/1b989a7d-1e76-4564-bbb5-085739f18d1b' width='30'> <img src='https://github.com/datatales42/challenge-idwall-all-docs/assets/69640514/00cf004d-7151-4d38-bcdf-f60823bbd45a' width='30'> Description
-This is a repository for presenting submission for a challenge presented by IdWall in conjunction with FIAP college, by the contributing members of this project. Every documentation file, videos, and scripts to populate the database may be found.
+This is a repository for presenting submission for a challenge presented by Idwall in conjunction with FIAP college, by the contributing members of this project. Every documentation file, videos, and scripts to populate the database may be found.
 
 ## 🤔❓ Challenge 
 ### Context References
